@@ -20,7 +20,7 @@ class DLList
         }
         ~DLList()
         {
-
+            empty();   
         }
         
         bool insert(T data)
@@ -91,6 +91,18 @@ class DLList
             }
 
             return nullptr;
+        }
+
+        void empty()
+        {
+            DLNode<T> * current = nullptr;
+            DLNode<T> * next = head_;
+
+            while(next != nullptr) {
+                current = next;
+                next = current->next();
+                delete current;
+            }
         }
 
         DLNode<T> * head() { return head_; }
