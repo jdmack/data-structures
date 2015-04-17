@@ -10,7 +10,8 @@ Implemented via a linked list with Nodes.
 ## Queue
 Implemented via an array of pointers, storing the index of the current front and back
 
-valgrind --tool=memcheck --leak-check=yes ./a.out
-g++ test_dl_list.cpp -g -O0 -std=c++0x -Wall
+## Building/Testing Commands
+* valgrind --tool=memcheck --leak-check=yes ./a.out
+* g++ test_dl_list.cpp -g -O0 -std=c++0x -Wall
 
 
