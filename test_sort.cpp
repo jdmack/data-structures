@@ -3,6 +3,7 @@
 #include <list>
 #include <time.h>
 #include "merge_sort.h"
+#include "quick_sort.h"
 
 void print_list(std::list<int> * list);
 
@@ -10,7 +11,7 @@ int main()
 {
     srand(time(NULL)); 
 
-    int num_of_eles = 2000000;
+    int num_of_eles = 19;
 
     std::list<int> * list = new std::list<int>();
     
@@ -21,7 +22,8 @@ int main()
     
     print_list(list);
 
-    list = MergeSort<int>::sort(list);
+    //list = MergeSort<int>::sort(list);
+    list = QuickSort<int>::sort(list);
 
     print_list(list);
 
